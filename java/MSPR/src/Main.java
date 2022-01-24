@@ -83,7 +83,6 @@ public class Main {
                         System.out.println(line);
                         String pathFile = pathFiche+line+".txt";
                         String imageFile = pathCni+line+".png";
-                        System.out.println(pathFile);
 
                         int cptLine = 0;
                         String agentNom = "";
@@ -96,17 +95,15 @@ public class Main {
 
                         while(read2) {
                             String line2 = bufferFiche.readLine();
-                            if (line == null) {
-                                read = false;
+                            if (line2 == null) {
+                                read2 = false;
                             } else {
                                 System.out.println(line2+" test");
                                 if(cptLine == 0){
                                     agentNom = line2;
                                 }else if(cptLine == 1){
                                     agentPrenom = line2;
-                                }else if(cptLine == 8){
-                                    read2 = false;
-                                } else if (cptLine >= 5){
+                                }else if (cptLine >= 5){
                                     materiel.add(line2);
                                 }
                                 cptLine++;
