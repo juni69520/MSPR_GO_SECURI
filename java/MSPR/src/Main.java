@@ -18,21 +18,21 @@ public class Main {
         String html =
                 "<head>" +
                         "<style>" +
-                        "@font-face {" +
-                        "font-family: 'Roboto-Light';" +
-                        "src: url('Roboto-Light.eot');" +
-                        "src: url('Roboto-Light.woff') format('woff')," +
-                        "url('Roboto-Light.otf') format('opentype')," +
-                        "url('Roboto-Light.svg#filename') format('svg');" +
-                        "}" +
+                            "@font-face {" +
+                                "font-family: 'Roboto-Light';" +
+                                "src: url('Roboto-Light.eot');" +
+                                "src: url('Roboto-Light.woff') format('woff')," +
+                                "url('Roboto-Light.otf') format('opentype')," +
+                                "url('Roboto-Light.svg#filename') format('svg');" +
+                            "}" +
                         "</style>" +
-                        "</head>" +
-                        "<body style='font-family: \"CustomFont\"'>" +
-                        "   <div>" +
-                        "       <table style='margin-left:auto;margin-right:auto;margin-top:12%; border: 1px solid black;'>" +
-                        "           <tr'>" +
-                        "               <th style='border: 1px solid black; width:180px;text-align: center;vertical-align: middle;'>List des agents</th>" +
-                        "           <tr>";
+                "</head>" +
+                "<body style='font-family: \"CustomFont\"'>" +
+                "   <div>" +
+                "       <table style='margin-left:auto;margin-right:auto;margin-top:12%; border: 1px solid black;'>" +
+                "           <tr'>" +
+                "               <th style='border: 1px solid black; width:180px;text-align: center;vertical-align: middle;'>List des agents</th>" +
+                "           <tr>";
 
         File fa= new File("index.html");
 
@@ -55,6 +55,58 @@ public class Main {
                     }
                     html += "<tr style=''><td style='border: 1px solid black;background-color:"+backgroundColor+";text-align: center;vertical-align: middle;'><a href='./fiche_agent/"+line+".html' style='text-decoration:none; color:white;'>"+line+"</a><td><tr>";
                     cpt+=1;
+
+                    FileReader reader2 = new FileReader(filename);
+                    BufferedReader buffer2 = new BufferedReader(reader);
+                    boolean read2 = true;
+                    String html2;
+
+                    String pathFile = pathFiche+line+".txt";
+                    String imageFile = pathCni+line+".png";
+                    String pathReturn = "return.png";
+
+                    int cptLine = 0;
+                    String agentNom = "";
+                    String agentPrenom = "";
+                    List materiel =  new ArrayList();
+
+                    FileReader readerFiche = new FileReader(pathFile);
+                    BufferedReader bufferFiche = new BufferedReader(readerFiche);
+
+                    while(read2) {
+                        String line2 = bufferFiche.readLine();
+                        if (line2 == null) {
+                            read2 = false;
+                        } else {
+                            if(cptLine == 0){
+                                agentNom = line2;
+                            }else if(cptLine == 1){
+                                agentPrenom = line2;
+                            }else if (cptLine >= 5){
+                                materiel.add(line2);
+                            }
+                            cptLine++;
+                        }
+                    }
+                    File fa2= new File("./fiche_agent/"+line+".html");
+                    BufferedWriter bw2 = new BufferedWriter(new FileWriter(fa2));
+
+                    html2 = "<head></head><body><section style=\"background-color:#379EC1; margin-left:12%;display:block; border: 2px solid black; height: 400px; width:1000px;padding-top:20px;\">" +
+                            "<div style=\"position: fixed; left: 15%;\"><a href=\"../index.html\"><img style=\"width:2%; height\" src='"+pathReturn+"'></a></div>" +
+                            "<div style=\"position: fixed; right: 40%; top: 3%;\"><img style=\"background-color: rgba(255, 255, 128, 0);display:block;margin:auto;\" src='"+imageFile+"'></div>" +
+                            "<div style=\"position: fixed; left: 15%; top: 10%; border-radius: 20px; background: #659224; padding: 15px; width: 200px; height: 20px; text-align:center;\">" +agentNom+" "+agentPrenom;
+
+                    html2 += "<div style=\"margin-top:25%;\"><table>";
+                    for (int i = 0; i < materiel.size(); i++) {
+
+                        html2+="<tr><td><input style=\"background: #00bf00;\"type=\"checkbox\" id='"+materiel.get(i)+"' name='"+materiel.get(i)+"' checked> <label for='"+materiel.get(i)+"' style=\"color:white;\">"+materiel.get(i)+"</label></td></tr>";
+                    }
+                    html2 += "</table></div></div></section>";
+                    html2+="</body><footer></footer>";
+
+                    bw2.write(html2);
+                    bw2.close();
+                    bufferFiche.close();
                 }
             }
             buffer.close();
@@ -67,70 +119,5 @@ public class Main {
         BufferedWriter bw = new BufferedWriter(new FileWriter(fa));
         bw.write(html);
         bw.close();
-        html = "";
-
-        try {
-            FileReader reader = new FileReader(filename);
-            BufferedReader buffer = new BufferedReader(reader);
-            boolean read = true;
-
-            while(read) {
-                String line = buffer.readLine();
-                if (line == null) {
-                    read = false;
-                } else {
-                    try {
-                        System.out.println(line);
-                        String pathFile = pathFiche+line+".txt";
-                        String imageFile = pathCni+line+".png";
-
-                        int cptLine = 0;
-                        String agentNom = "";
-                        String agentPrenom = "";
-                        List materiel =  new ArrayList();
-
-                        FileReader readerFiche = new FileReader(pathFile);
-                        BufferedReader bufferFiche = new BufferedReader(readerFiche);
-                        boolean read2 = true;
-
-                        while(read2) {
-                            String line2 = bufferFiche.readLine();
-                            if (line2 == null) {
-                                read2 = false;
-                            } else {
-                                System.out.println(line2+" test");
-                                if(cptLine == 0){
-                                    agentNom = line2;
-                                }else if(cptLine == 1){
-                                    agentPrenom = line2;
-                                }else if (cptLine >= 5){
-                                    materiel.add(line2);
-                                }
-                                cptLine++;
-                            }
-                        }
-                        fa= new File("./fiche_agent/"+line+".html");
-                        bw = new BufferedWriter(new FileWriter(fa));
-
-                        html = "<head></head><body><div>"+agentNom+" "+agentPrenom;
-                        html+= "<img src='"+imageFile+"'>";
-                        for (int i = 0; i < materiel.size(); i++) {
-                            html+="<br>"+materiel.get(i);
-                        }
-
-                        html+="</body><footer></footer>";
-
-                        bw.write(html);
-                        bw.close();
-                        bufferFiche.close();
-                    } catch (Exception e) {
-                        System.err.println(e);
-                    }
-                }
-            }
-            buffer.close();
-        } catch (Exception e) {
-            System.err.println(e);
-        }
     }
 }
