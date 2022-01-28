@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    public static  String filename = "agents.txt";
+    public static  String filename = "./agents.txt";
     public static  String pathFiche = "./fiche_agent/";
     public static  String pathCni = "../cni_agent/";
     public static void main(String[] args) throws IOException {
@@ -21,21 +21,21 @@ public class Main {
         String html =
                 "<head>" +
                         "<style>" +
-                        "@font-face {" +
-                        "font-family: 'Roboto-Light';" +
-                        "src: url('Roboto-Light.eot');" +
-                        "src: url('Roboto-Light.woff') format('woff')," +
-                        "url('Roboto-Light.otf') format('opentype')," +
-                        "url('Roboto-Light.svg#filename') format('svg');" +
-                        "}" +
+                            "@font-face {" +
+                                "font-family: 'Roboto-Light';" +
+                                "src: url('Roboto-Light.eot');" +
+                                "src: url('Roboto-Light.woff') format('woff')," +
+                                "url('Roboto-Light.otf') format('opentype')," +
+                                "url('Roboto-Light.svg#filename') format('svg');" +
+                            "}" +
                         "</style>" +
-                        "</head>" +
-                        "<body style='font-family: \"CustomFont\"'>" +
-                        "   <div>" +
-                        "       <table style='margin-left:auto;margin-right:auto;margin-top:12%; border: 1px solid black;'>" +
-                        "           <tr'>" +
-                        "               <th style='border: 1px solid black; width:180px;text-align: center;vertical-align: middle;'>List des agents</th>" +
-                        "           <tr>";
+                "</head>" +
+                "<body style='font-family: \"CustomFont\"'>" +
+                "   <div>" +
+                "       <table style='margin-left:auto;margin-right:auto;margin-top:12%; border: 1px solid black;'>" +
+                "           <tr'>" +
+                "               <th style='border: 1px solid black; width:180px;text-align: center;vertical-align: middle;'>List des agents</th>" +
+                "           <tr>";
 
         File fa= new File("index.html");
 
@@ -127,7 +127,7 @@ public class Main {
 
         File fa3= new File("./staff/.htpasswd");
         BufferedWriter bw3 = new BufferedWriter(new FileWriter(fa3));
-        bw3.write(htpasswd);
+        bw3.write(htpasswd.substring(0, htpasswd.length() - 1));
         bw3.close();
     }
 }
