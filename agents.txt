@@ -1,10 +1,10 @@
-cberthier
-sconnor
-jmacclane
 afoley
-mriggs
-sholmes
-jrouletabille
 alupin
-jbond
+cberthier
 hpoirot
+jbond
+jmacclane
+jrouletabille
+mriggs
+sconnor
+sholmes
