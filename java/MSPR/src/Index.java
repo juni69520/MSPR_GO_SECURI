@@ -1,19 +1,23 @@
+package com.company;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.FileReader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-
 
 public class Main {
 	public static  String filename = "agents.txt";
 	public static  String pathFiche = "./fiche_agent/";
 	public static  String pathCni = "../cni_agent/";
 	public static void main(String[] args) throws IOException {
+		Files.createDirectories(Paths.get("./staff/"));
 
+		String htpasswd = "";
 		String html =
 				"<head>" +
 						"<style>" +
@@ -52,7 +56,7 @@ public class Main {
 					if (Math.floorMod(cpt, 2) == 0){
 						backgroundColor = "#379EC1";
 					}
-					html += "<tr style=''><td style='border: 1px solid black;background-color:"+backgroundColor+";text-align: center;vertical-align: middle;'><a href='./fiche_agent/"+line+".html' style='text-decoration:none; color:white;'>"+line+"</a><td><tr>";
+					html += "<tr style=''><td style='border: 1px solid black;background-color:"+backgroundColor+";text-align: center;vertical-align: middle;'><a href='./staff/"+line+".html' style='text-decoration:none; color:white;'>"+line+"</a><td><tr>";
 					cpt+=1;
 
 					FileReader reader2 = new FileReader(filename);
@@ -62,7 +66,7 @@ public class Main {
 
 					String pathFile = pathFiche+line+".txt";
 					String imageFile = pathCni+line+".png";
-					String pathReturn = "return.png";
+					String pathReturn = "../image/return.png";
 
 					int cptLine = 0;
 					String agentNom = "";
@@ -81,13 +85,15 @@ public class Main {
 								agentNom = line2;
 							}else if(cptLine == 1){
 								agentPrenom = line2;
-							}else if (cptLine >= 5){
+							}else if(cptLine == 2){
+								htpasswd += line+":"+ hash.getMd5(line2)+"\n";
+							} else if (cptLine >= 5){
 								materiel.add(line2);
 							}
 							cptLine++;
 						}
 					}
-					File fa2= new File("./fiche_agent/"+line+".html");
+					File fa2= new File("./staff/"+line+".html");
 					BufferedWriter bw2 = new BufferedWriter(new FileWriter(fa2));
 
 					html2 = "<head></head><body><section style=\"background-color:#379EC1; margin-left:12%;display:block; border: 2px solid black; height: 400px; width:1000px;padding-top:20px;\">" +
@@ -118,5 +124,10 @@ public class Main {
 		BufferedWriter bw = new BufferedWriter(new FileWriter(fa));
 		bw.write(html);
 		bw.close();
+
+		File fa3= new File("./staff/.htpasswd");
+		BufferedWriter bw3 = new BufferedWriter(new FileWriter(fa3));
+		bw3.write(htpasswd);
+		bw3.close();
 	}
 }
