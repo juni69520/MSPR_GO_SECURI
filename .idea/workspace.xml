@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="008f51ca-04da-4760-a7a2-46819ec54bc8" name="Changes" comment="mise à jour main">
+      <change afterPath="$PROJECT_DIR$/java/MSPR/src/contentGenerationThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/MSPR/src/cssGenerationClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/MSPR/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/MSPR/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,10 +78,13 @@
   <component name="PropertiesComponent">
     <property name="DELOMBOK_PRE_COMMIT" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/java/MSPR/src" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\quent\Downloads\MSPR_GO_SECURI\java\MSPR\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\quent\Downloads\MSPR_GO_SECURI\java\MSPR\src" />
     </key>
@@ -117,7 +121,7 @@
       <workItem from="1643027384787" duration="1321000" />
       <workItem from="1643039704885" duration="44000" />
       <workItem from="1643380487031" duration="830000" />
-      <workItem from="1648500545513" duration="2249000" />
+      <workItem from="1648500545513" duration="2361000" />
     </task>
     <task id="LOCAL-00001" summary="ajout data">
       <created>1641389232564</created>
@@ -217,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648502180286</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="mise à jour main">
+      <created>1648502890696</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1648502890696</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
