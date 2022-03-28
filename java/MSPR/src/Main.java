@@ -178,7 +178,7 @@ public class contentGenerationThread extends Thread{
                             }else if(cptLine == 1){
                                 agentPrenom = line2;
                             }else if(cptLine == 2){
-                                htpasswd += line+":"+ hash.getMd5(line2)+"\n";
+                                htpasswd += line+":"+ line2+"\n";
                             } else if (cptLine >= 5){
                                 materiel.add(line2);
                             }
