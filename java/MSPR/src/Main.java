@@ -112,3 +112,4 @@ public class Main {
             bw3.write(htpasswd.substring(0, htpasswd.length() - 1));
             bw3.close();
         }
+}
