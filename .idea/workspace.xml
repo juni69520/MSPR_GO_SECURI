@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="008f51ca-04da-4760-a7a2-46819ec54bc8" name="Changes" comment="mise à jour main">
-      <change afterPath="$PROJECT_DIR$/java/MSPR/src/contentGenerationThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/MSPR/src/cssGenerationClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/Roboto-Black.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/generator_config.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/roboto-black-demo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/roboto-black-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/roboto-black-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/specimen_files/grid_12-825-55-15.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/specimen_files/specimen_stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +129,8 @@
       <workItem from="1643039704885" duration="44000" />
       <workItem from="1643380487031" duration="830000" />
       <workItem from="1648500545513" duration="2361000" />
+      <workItem from="1648504111177" duration="126000" />
+      <workItem from="1648504392729" duration="55000" />
     </task>
     <task id="LOCAL-00001" summary="ajout data">
       <created>1641389232564</created>

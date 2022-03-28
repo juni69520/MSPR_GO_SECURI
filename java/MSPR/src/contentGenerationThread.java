@@ -3,14 +3,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class contentGenerationThread extends Thread{
-    public static  String filename = "./src/www/agents.txt";
-    public static  String pathFiche = "./src/www/fiche_agent/";
-    public static  String pathCni = "./src/www/cni_agent/";
+    public static  String filename = "./www/agents.txt";
+    public static  String pathFiche = "./www/fiche_agent/";
+    public static  String pathCni = "./www/cni_agent/";
 
     public void run()
     {
-
-
         String htpasswd = "";
         String html =
                 "<head>\n<link rel=\"stylesheet\" href=\"style.css\">\n<link rel=\"preload\" href=\"Roboto-Black.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>\n</head>\n" +
@@ -21,7 +19,7 @@ public class contentGenerationThread extends Thread{
                         "\n<th>List des agents</th>" +
                         "\n<tr>";
 
-        File fa= new File("./src/www/index.html");
+        File fa= new File("./www/index.html");
 
         String backgroundColor = "";
         int cpt = 0;
@@ -49,7 +47,7 @@ public class contentGenerationThread extends Thread{
 
                     String pathFile = pathFiche+line+".txt";
                     String imageFile = pathCni+line+".png";
-                    String pathReturn = "./src/www/image/return.png";
+                    String pathReturn = "/www/image/return.png";
 
                     int cptLine = 0;
                     String agentNom = "";
@@ -76,7 +74,7 @@ public class contentGenerationThread extends Thread{
                             cptLine++;
                         }
                     }
-                    File fa2= new File("./src/www/staff/"+line+".html");
+                    File fa2= new File("./www/staff/"+line+".html");
                     BufferedWriter bw2 = new BufferedWriter(new FileWriter(fa2));
 
                     html2 = "<head>\n<link rel=\"stylesheet\" href=\"../style.css\">\n</head>\n" +
@@ -116,7 +114,7 @@ public class contentGenerationThread extends Thread{
             bw.write(html);
             bw.close();
 
-            File fa3= new File("./src/www/staff/.htpasswd");
+            File fa3= new File("./www/staff/.htpasswd");
             BufferedWriter bw3 = new BufferedWriter(new FileWriter(fa3));
             bw3.write(htpasswd.substring(0, htpasswd.length() - 1));
             bw3.close();
