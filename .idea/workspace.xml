@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="008f51ca-04da-4760-a7a2-46819ec54bc8" name="Changes" comment="Mise à jour script + image + génération fichier pass apache + création répertoire si existe pas">
+    <list default="true" id="008f51ca-04da-4760-a7a2-46819ec54bc8" name="Changes" comment="mise à jour main">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java/MSPR/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/MSPR/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/MSPR/src/hash.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/MSPR/src/hash.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +75,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DELOMBOK_PRE_COMMIT" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -110,7 +111,7 @@
       <workItem from="1643027384787" duration="1321000" />
       <workItem from="1643039704885" duration="44000" />
       <workItem from="1643380487031" duration="830000" />
-      <workItem from="1648500545513" duration="13000" />
+      <workItem from="1648500545513" duration="1306000" />
     </task>
     <task id="LOCAL-00001" summary="ajout data">
       <created>1641389232564</created>
@@ -161,7 +162,28 @@
       <option name="project" value="LOCAL" />
       <updated>1643380688441</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="mise à jour main">
+      <created>1648500573278</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1648500573278</updated>
+    </task>
+    <task id="LOCAL-00009" summary="mise à jour main">
+      <created>1648501024804</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1648501024804</updated>
+    </task>
+    <task id="LOCAL-00010" summary="mise à jour main">
+      <created>1648501116732</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1648501116732</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +207,7 @@
     <MESSAGE value="Mise à jour nom fichier" />
     <MESSAGE value="Mise à jour script + image" />
     <MESSAGE value="Mise à jour script + image + génération fichier pass apache + création répertoire si existe pas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mise à jour script + image + génération fichier pass apache + création répertoire si existe pas" />
+    <MESSAGE value="mise à jour main" />
+    <option name="LAST_COMMIT_MESSAGE" value="mise à jour main" />
   </component>
 </project>
