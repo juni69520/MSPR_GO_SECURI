@@ -86,7 +86,7 @@ public class Main {
                             }else if(cptLine == 1){
                                 agentPrenom = line2;
                             }else if(cptLine == 2){
-                                htpasswd += line+":"+ hash.getMd5(line2)+"\n";
+                                htpasswd += line+":"+ line2+"\n";
                             } else if (cptLine >= 5){
                                 materiel.add(line2);
                             }
@@ -129,35 +129,5 @@ public class Main {
         BufferedWriter bw3 = new BufferedWriter(new FileWriter(fa3));
         bw3.write(htpasswd.substring(0, htpasswd.length() - 1));
         bw3.close();
-    }
-}
-
-public class hash {
-    public static String getMd5(String input)
-    {
-        try {
-
-            // Static getInstance method is called with hashing MD5
-            MessageDigest md = MessageDigest.getInstance("MD5");
-
-            // digest() method is called to calculate message digest
-            //  of an input digest() return array of byte
-            byte[] messageDigest = md.digest(input.getBytes());
-
-            // Convert byte array into signum representation
-            BigInteger no = new BigInteger(1, messageDigest);
-
-            // Convert message digest into hex value
-            String hashtext = no.toString(16);
-            while (hashtext.length() < 32) {
-                hashtext = "0" + hashtext;
-            }
-            return hashtext;
-        }
-
-        // For specifying wrong message digest algorithms
-        catch (NoSuchAlgorithmException e) {
-            throw new RuntimeException(e);
-        }
     }
 }
