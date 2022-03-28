@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="008f51ca-04da-4760-a7a2-46819ec54bc8" name="Changes" comment="mise à jour main">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java/MSPR/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/MSPR/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,6 +88,7 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="MSPR_GO_SECURI" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
@@ -115,7 +117,7 @@
       <workItem from="1643027384787" duration="1321000" />
       <workItem from="1643039704885" duration="44000" />
       <workItem from="1643380487031" duration="830000" />
-      <workItem from="1648500545513" duration="1523000" />
+      <workItem from="1648500545513" duration="1602000" />
     </task>
     <task id="LOCAL-00001" summary="ajout data">
       <created>1641389232564</created>
@@ -201,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648502072470</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="mise à jour main">
+      <created>1648502095534</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1648502095534</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

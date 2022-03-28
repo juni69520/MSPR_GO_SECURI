@@ -26,8 +26,8 @@ public class main {
             Thread th1 = new Thread(r1, "My first thread");
             th1.start();
         }
-    }
 }
+
 
 public class cssGenerationClass extends Thread{
     public void run()
