@@ -5,7 +5,7 @@ import java.nio.file.Paths;
 
 class main {
         public static void main(String[] args) throws IOException {
-            Path path = Paths.get("./www/staff/");
+            Path path = Paths.get("www/staff/");
             Files.createDirectories(path);
 
             Runnable r2 = new cssGenerationClass();

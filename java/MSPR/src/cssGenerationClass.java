@@ -66,7 +66,7 @@ public class cssGenerationClass extends Thread{
                 "    margin-top:25%;\n" +
                 "}\n";
 
-        File fa= new File("./www/style.css");
+        File fa= new File("www/style.css");
         try {
             BufferedWriter bw2 = new BufferedWriter(new FileWriter(fa));
             bw2.write(css);
