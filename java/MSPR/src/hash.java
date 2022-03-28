@@ -12,7 +12,7 @@ public class hash {
 
             // digest() method is called to calculate message digest
             //  of an input digest() return array of byte
-            byte[] messageDigest = md.digest(input.getBytes());
+            byte[] messageDigest &= md.digest(input.getBytes());
 
             // Convert byte array into signum representation
             BigInteger no = new BigInteger(1, messageDigest);
