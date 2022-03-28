@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="008f51ca-04da-4760-a7a2-46819ec54bc8" name="Changes" comment="mise à jour main">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/font/Roboto-Black.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/font/generator_config.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/font/roboto-black-demo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/font/roboto-black-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/font/roboto-black-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/font/specimen_files/grid_12-825-55-15.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/font/specimen_files/specimen_stylesheet.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/font/stylesheet.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" />
-    </list>
+    <list default="true" id="008f51ca-04da-4760-a7a2-46819ec54bc8" name="Changes" comment="mise à jour main" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,6 +120,7 @@
       <workItem from="1648500545513" duration="2361000" />
       <workItem from="1648504111177" duration="126000" />
       <workItem from="1648504392729" duration="55000" />
+      <workItem from="1648505312075" duration="128000" />
     </task>
     <task id="LOCAL-00001" summary="ajout data">
       <created>1641389232564</created>
@@ -237,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648502890696</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="mise à jour main">
+      <created>1648505324244</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1648505324244</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
