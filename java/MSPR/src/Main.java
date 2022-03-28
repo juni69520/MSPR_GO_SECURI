@@ -24,12 +24,11 @@ public class main {
 
             Runnable r1 = new contentGenerationThread();
             Thread th1 = new Thread(r1, "My first thread");
-            th1.start();
-        }
+            th1.start();}
 }
 
 
-public class cssGenerationClass extends Thread{
+public static class cssGenerationClass extends Thread{
     public void run()
     {
         String css = "@font-face {\n" +
@@ -105,7 +104,7 @@ public class cssGenerationClass extends Thread{
     }
 }
 
-public class contentGenerationThread extends Thread{
+public static class contentGenerationThread extends Thread{
     public static  String filename = "./www/agents.txt";
     public static  String pathFiche = "./www/fiche_agent/";
     public static  String pathCni = "../cni_agent/";
