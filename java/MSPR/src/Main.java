@@ -10,12 +10,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
-    public static  String filename = "./agents.txt";
-    public static  String pathFiche = "./fiche_agent/";
-    public static  String pathCni = "../cni_agent/";
-
-    public class main {
+public class main {
         public static  String filename = "./www/agents.txt";
         public static  String pathFiche = "./www/fiche_agent/";
         public static  String pathCni = "../cni_agent/";
