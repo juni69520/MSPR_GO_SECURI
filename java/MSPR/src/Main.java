@@ -9,11 +9,11 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 public class Main {
-    public static  String filename = "./agents.txt";
-    public static  String pathFiche = "./fiche_agent/";
-    public static  String pathCni = "../cni_agent/";
+    public static  String filename = "./www/agents.txt";
+    public static  String pathFiche = "./www/fiche_agent/";
+    public static  String pathCni = "./www/cni_agent/";
     public static void main(String[] args) throws IOException {
-        Files.createDirectories(Paths.get("./staff/"));
+        Files.createDirectories(Paths.get("./www/staff/"));
         String htpasswd = "";
         String html =
                 "<head>" +
@@ -33,7 +33,7 @@ public class Main {
                         "           <tr'>" +
                         "               <th style='border: 1px solid black; width:180px;text-align: center;vertical-align: middle;'>List des agents</th>" +
                         "           <tr>";
-        File fa= new File("index.html");
+        File fa= new File("./www/index.html");
         //Path filePath = Paths.get(filename);
         String backgroundColor = "";
         int cpt = 0;
@@ -82,7 +82,7 @@ public class Main {
                                 cptLine++;
                             }
                         }
-                        File fa2= new File("./staff/"+line+".html");
+                        File fa2= new File("./src/www/staff/"+line+".html");
                         BufferedWriter bw2 = new BufferedWriter(new FileWriter(fa2));
                         html2 = "<head></head><body><section style=\"background-color:#379EC1; margin-left:12%;display:block; border: 2px solid black; height: 400px; width:1000px;padding-top:20px;\">" +
                                 "<div style=\"position: fixed; left: 15%;\"><a href=\"../index.html\"><img style=\"width:2%; height\" src='"+pathReturn+"'></a></div>" +
@@ -107,7 +107,7 @@ public class Main {
             BufferedWriter bw = new BufferedWriter(new FileWriter(fa));
             bw.write(html);
             bw.close();
-            File fa3= new File("./staff/.htpasswd");
+            File fa3= new File("./www/staff/.htpasswd");
             BufferedWriter bw3 = new BufferedWriter(new FileWriter(fa3));
             bw3.write(htpasswd.substring(0, htpasswd.length() - 1));
             bw3.close();
