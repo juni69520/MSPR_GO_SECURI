@@ -9,9 +9,9 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 public class Main {
-    public static  String filename = "./www/agents.txt";
-    public static  String pathFiche = "./www/fiche_agent/";
-    public static  String pathCni = "./www/cni_agent/";
+    public static  String filename = "./src/www/agents.txt";
+    public static  String pathFiche = "./src/www/fiche_agent/";
+    public static  String pathCni = "./src/www/cni_agent/";
     public static void main(String[] args) throws IOException {
         Files.createDirectories(Paths.get("./www/staff/"));
         String htpasswd = "";
