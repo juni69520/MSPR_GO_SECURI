@@ -75,13 +75,14 @@ public class Main {
                                 agentNom = line2;
                             }else if(cptLine == 1){
                                 agentPrenom = line2;
-                            }else if(cptLine == 2){
+                            }else if(cptLine == 3){
                                 htpasswd += line+":"+ line2+"\n";
                             }else if (cptLine >= 5){
                                 materiel.add(line2);
                             }
                                 cptLine++;
                             }
+
                         }
                         File fa2= new File("./staff/agents/"+line+".html");
                         BufferedWriter bw2 = new BufferedWriter(new FileWriter(fa2));
